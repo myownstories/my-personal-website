@@ -1,20 +1,190 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Own Stories</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Own Stories</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b0b10;
+    color: white;
+    line-height: 1.6;
+}
+
+header {
+    padding: 28px 20px;
+    text-align: center;
+    background: #12121a;
+    border-bottom: 1px solid #292934;
+}
+
+header h1 {
+    font-size: 30px;
+}
+
+header p {
+    color: #999;
+    margin-top: 5px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 16px;
+    background: #101017;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #b58cff;
+}
+
+.hero {
+    padding: 90px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #151522, #272039);
+}
+
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: auto;
+    color: #bdbdc7;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 55px 20px;
+}
+
+.section {
+    margin-bottom: 55px;
+}
+
+.section h2 {
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: #15151e;
+    border: 1px solid #292934;
+    border-radius: 18px;
+    padding: 25px;
+    margin-bottom: 18px;
+}
+
+.card h3 {
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #aaaab5;
+}
+
+footer {
+    text-align: center;
+    padding: 35px 20px;
+    color: #777;
+    border-top: 1px solid #292934;
+}
+
+@media (max-width: 600px) {
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+}
+</style>
 </head>
+
 <body>
 
+<header>
     <h1>My Own Stories</h1>
+    <p>Stories • Thoughts • Moments</p>
+</header>
 
-    <h2>Welcome</h2>
-    <p>Welcome to my personal website.</p>
+<nav>
+    <a href="#home">Home</a>
+    <a href="#stories">Stories</a>
+    <a href="#thoughts">Thoughts</a>
+    <a href="#gallery">Gallery</a>
+</nav>
 
-    <h2>My Stories</h2>
-    <p>My stories will be published here.</p>
+<section class="hero" id="home">
+    <h2>Welcome to My World</h2>
+    <p>
+        A personal space for my stories, thoughts,
+        memories and moments.
+    </p>
+</section>
 
-    <h2>My Thoughts</h2>
-    <p>My thoughts and ideas will be published here.</p>
+<main class="container">
+
+<section class="section" id="stories">
+    <h2>📖 Stories</h2>
+
+    <div class="card">
+        <h3>My First Story</h3>
+        <p>
+            Your stories will appear here.
+        </p>
+    </div>
+</section>
+
+<section class="section" id="thoughts">
+    <h2>💭 Thoughts</h2>
+
+    <div class="card">
+        <h3>A Thought</h3>
+        <p>
+            Your thoughts and ideas will appear here.
+        </p>
+    </div>
+</section>
+
+<section class="section" id="gallery">
+    <h2>🖼️ Gallery</h2>
+
+    <div class="card">
+        <p>
+            Your photos will appear here.
+        </p>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    © 2026 My Own Stories
+</footer>
 
 </body>
 </html>
