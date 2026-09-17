@@ -76,44 +76,49 @@ nav a:hover{
 }
 
 /* HERO */
-
-.hero{
-    min-height:55vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:70px 25px;
-    background:linear-gradient(135deg,#17152a,#28203d);
+.hero {
+    min-height: 65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 70px 20px;
+    background:
+        radial-gradient(circle at 50% 20%, #30205c 0%, #15121f 40%, #08080d 85%);
 }
 
-.hero h1{
-    font-size:42px;
-    margin-bottom:20px;
+.hero h1 {
+    font-size: clamp(42px, 10vw, 72px);
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin: 0 0 18px;
 }
 
-.hero p{
-    max-width:650px;
-    color:#c1bdc9;
-    font-size:18px;
+.hero p {
+    max-width: 650px;
+    color: #aaa5b8;
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 0 auto 30px;
 }
 
-.button{
-    display:inline-block;
-    margin-top:30px;
-    padding:13px 25px;
-    border-radius:30px;
-    background:#8c6cff;
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-    transition:.3s;
+.hero-button {
+    display: inline-block;
+    padding: 15px 28px;
+    border-radius: 50px;
+    background: #8b5cf6;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    transition: 0.3s ease;
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.25);
 }
 
-.button:hover{
-    transform:translateY(-3px);
-    background:#a98cff;
+.hero-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(139, 92, 246, 0.4);
 }
 
 /* CONTENT */
@@ -122,40 +127,45 @@ nav a:hover{
     max-width:950px;
     margin:auto;
     padding:70px 20px;
+}/* STORY CARDS */
+
+.section {
+    padding: 80px 0;
 }
 
-.section{
-    margin-bottom:80px;
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
 }
 
-.section h2{
-    font-size:32px;
-    margin-bottom:25px;
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 20px;
+    transition: 0.3s ease;
+    backdrop-filter: blur(10px);
 }
 
-.card{
-    padding:30px;
-    margin-bottom:20px;
-    border:1px solid #292735;
-    border-radius:20px;
-    background:linear-gradient(145deg,#12121a,#0d0d13);
-    box-shadow:0 10px 40px rgba(0,0,0,.25);
-    transition:.3s;
+.card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(139, 92, 246, 0.5);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
 }
 
-.card:hover{
-    transform:translateY(-5px);
-    border-color:#6d55bb;
+.card h3 {
+    font-size: 22px;
+    margin: 0 0 12px;
 }
 
-.card h3{
-    font-size:23px;
-    margin-bottom:10px;
+.card p {
+    color: #aaa5b8;
+    margin: 0;
+    line-height: 1.7;
 }
 
-.card p{
-    color:#aaa6b2;
-}
+
 
 /* ABOUT */
 
@@ -220,7 +230,37 @@ footer{
     }
 
 }
+/* SMOOTH ANIMATION */
 
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h1 {
+    animation: fadeUp 0.8s ease forwards;
+}
+
+.hero p {
+    animation: fadeUp 0.8s ease 0.15s forwards;
+    opacity: 0;
+}
+
+.hero-button {
+    animation: fadeUp 0.8s ease 0.3s forwards;
+    opacity: 0;
+}
+
+.card {
+    animation: fadeUp 0.7s ease forwards;
+        }
 </style>
 </head>
 
@@ -247,14 +287,14 @@ footer{
 
 <section class="hero" id="home">
 
-    <h1>Welcome to My World</h1>
+    <h1>My Own Stories</h1>
 
     <p>
-        A personal space where I keep my stories,
-        thoughts, memories and moments that matter.
-    </p>
+    A little corner of my world — stories, thoughts,
+    memories and moments that I don't want to forget.
+</p>
 
-    <a class="button" href="#stories">
+    <a class="hero-button" href="#stories">
         Explore My Stories
     </a>
 
@@ -268,23 +308,26 @@ footer{
 
     <div class="card">
 
-        <h3>My First Story</h3>
+    <h3>My First Story</h3>
 
-        <p>
-            Every journey starts somewhere.
-            This is where my stories will begin.
-        </p>
+    <p>
+        Every story has a beginning.
+        This is the first page of my little world —
+        a place for the moments, thoughts and memories
+        that are worth keeping.
+    </p>
 
-    </div>
+</div>
 
     <div class="card">
 
-        <h3>A Memory</h3>
+    <h3>A Memory</h3>
 
-        <p>
-            Some moments are too meaningful
-            to simply disappear with time.
-        </p>
+    <p>
+        Some moments may last only for a few seconds,
+        but their meaning can stay with us for years.
+        These are the moments we never want to lose.
+    </p>
 
     </div>
 
@@ -297,23 +340,26 @@ footer{
 
     <div class="card">
 
-        <h3>Something I Believe</h3>
+    <h3>Something I Believe</h3>
 
-        <p>
-            Life is a collection of experiences,
-            lessons and small moments.
-        </p>
+    <p>
+        We don't always understand a moment
+        while we are living it.
+        Sometimes its meaning becomes clear
+        only when we look back.
+    </p>
 
     </div>
 
     <div class="card">
 
-        <h3>Today's Thought</h3>
+    <h3>Today's Thought</h3>
 
-        <p>
-            Keep learning. Keep building.
-            Keep moving forward.
-        </p>
+    <p>
+        Progress doesn't always look dramatic.
+        Sometimes it is simply choosing to continue,
+        even when nobody else can see the effort.
+    </p>
 
     </div>
 
@@ -324,12 +370,14 @@ footer{
 
 <section class="about" id="about">
 
-    <h2>About This Website</h2>
+    <h2>About This Place</h2>
 
     <p>
-        This is my personal corner of the internet.
-        A place for my stories, thoughts, memories
-        and the things I want to remember.
+        This isn't just a website.
+        It's a small collection of stories, thoughts,
+        memories and moments that I want to keep.
+        A place where ordinary moments can become
+        something worth remembering.
     </p>
 
 </section>
@@ -337,7 +385,11 @@ footer{
 
 <footer>
 
-    © 2026 My Own Stories
+    <p>© 2026 My Own Stories</p>
+
+    <p class="footer-text">
+        Stories • Thoughts • Memories
+    </p>
 
 </footer>
 
