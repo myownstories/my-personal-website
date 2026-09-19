@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Thoughts • My Own Stories</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #08080d;
+    color: white;
+    line-height: 1.7;
+}
+
+header {
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    background:
+        radial-gradient(circle at top, #30205c 0%, #15121f 45%, #08080d 85%);
+}
+
+.logo {
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.subtitle {
+    color: #aaa5b8;
+    font-size: 17px;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 17px 10px;
+    background: rgba(10,10,15,.92);
+    border-bottom: 1px solid #292735;
+    backdrop-filter: blur(10px);
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #a98cff;
+}
+
+.container {
+    max-width: 950px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+h1 {
+    font-size: 34px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 20px;
+    transition: .3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(139,92,246,.5);
+    box-shadow: 0 15px 40px rgba(0,0,0,.25);
+}
+
+.card h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #aaa5b8;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #a98cff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 35px 20px;
+    color: #77727f;
+    border-top: 1px solid #292735;
+}
+
+@media (max-width:600px) {
+    .logo {
+        font-size: 32px;
+    }
+
+    .container {
+        padding: 40px 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">My Own Stories</div>
+    <div class="subtitle">Stories • Thoughts • Moments</div>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="stories.html">Stories</a>
+    <a href="thoughts.html">Thoughts</a>
+    <a href="index.html#about">About</a>
+</nav>
+
+<main class="container">
+
+    <h1>💭 Thoughts</h1>
+
+    <div class="card">
+        <h2>My First Thought</h2>
+        <p>A collection of thoughts that I wanted to keep.</p>
+        <a href="thought1.html">Read Thought →</a>
+    </div>
+
+    <div class="card">
+        <h2>Something I Believe</h2>
+        <p>We don't always understand a moment while we are living it.</p>
+        <a href="thought2.html">Read Thought →</a>
+    </div>
+
+    <div class="card">
+        <h2>Today's Thought</h2>
+        <p>Progress doesn't always look dramatic.</p>
+        <a href="thought3.html">Read Thought →</a>
+    </div>
+
+</main>
+
+<footer>
+    <p>© 2026 My Own Stories</p>
+    <p>Stories • Thoughts • Memories</p>
+</footer>
+
+</body>
+</html>
